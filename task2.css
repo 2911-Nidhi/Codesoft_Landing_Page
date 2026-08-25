@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f1;
+    color: #17221f;
+}
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: #f5f6f1;
+}
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+.logo span {
+    color: #d17a45;
+}
+nav {
+    display: flex;
+    gap: 32px;
+}
+nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #17221f;
+}
+.login {
+    border: none;
+    background: #17221f;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 13px;
+}
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 55px 7%;
+}
+.hero-content {
+    width: 50%;
+}
+.tag {
+    display: inline-block;
+    background: #e3e9df;
+    color: #486050;
+    padding: 9px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-bottom: 22px;
+}
+h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    letter-spacing: -3px;
+    margin-bottom: 22px;
+}
+h1 span {
+    display: block;
+    color: #d17a45;
+}
+.hero-content > p {
+    max-width: 520px;
+    color: #666;
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+.buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 45px;
+}
+.primary-btn {
+    background: #17221f;
+    color: white;
+    border: none;
+    padding: 15px 24px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.secondary-btn {
+    background: transparent;
+    border: 1px solid #bbb;
+    padding: 15px 24px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.primary-btn:hover {
+    background: #d17a45;
+}
+.secondary-btn:hover {
+    background: #e8e9e3;
+}
+.stats {
+    display: flex;
+    gap: 45px;
+}
+.stats h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+.stats p {
+    font-size: 11px;
+    color: #777;
+}
+.hero-image {
+    width: 50%;
+}
+.image-box {
+    position: relative;
+    width: 100%;
+    height: 470px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #24483f;
+}
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        transparent 55%,
+        rgba(0, 0, 0, 0.35)
+    );
+}
+.floating-card {
+    position: absolute;
+    z-index: 2;
+    bottom: 25px;
+    left: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 14px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+.icon {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #d17a45;
+    color: white;
+    font-weight: bold;
+}
+.floating-card strong {
+    display: block;
+    font-size: 13px;
+}
+.floating-card small {
+    display: block;
+    color: #888;
+    font-size: 10px;
+    margin-top: 3px;
+}
+.circle {
+    position: absolute;
+    z-index: 1;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 30px solid rgba(255,255,255,0.18);
+    right: -70px;
+    top: -60px;
+}
+footer {
+    padding: 20px 7% 35px;
+    text-align: center;
+}
+footer > p {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.brands {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    color: #777;
+    font-weight: bold;
+    font-size: 14px;
+}
+@media (max-width: 900px) {
+    nav {
+        display: none;
+    }
+    .hero {
+        flex-direction: column;
+        padding-top: 40px;
+    }
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    .image-box {
+        height: 400px;
+    }
+}
+@media (max-width: 500px) {
+    header {
+        padding: 0 5%;
+    }
+    .login {
+        padding: 10px 15px;
+    }
+    .hero {
+        padding: 35px 5%;
+    }
+    h1 {
+        font-size: 40px;
+    }
+    .buttons {
+        flex-direction: column;
+    }
+    .stats {
+        gap: 20px;
+    }
+    .brands {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
